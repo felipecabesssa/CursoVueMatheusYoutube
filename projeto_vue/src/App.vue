@@ -18,6 +18,13 @@
     <p>Criando assim uma arvore de componentes, onde um depende do outro, ou não</p>
     <Pessoa />
 
+    <hr>
+    <h3 style="color: red; text-align: center;">Aula 9 - Diretivas - v-if, v-show, v-for</h3>
+    <hr>
+    <p>A diretiva vai dentro da tag, exemplo de booleano v-if dentro do paragrafo = true exibe o paragrafo, false não</p>
+    <p>V-Show é parecida com o v-if porem ela só exibe ou não</p>
+    <p>Exemplos no componente Info.vue acima</p>
+    <p>V-for exibe uma lista (um array) na aplicação</p>
   </div>
 </template>
 

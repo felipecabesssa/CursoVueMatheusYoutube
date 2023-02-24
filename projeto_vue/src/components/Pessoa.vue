@@ -5,9 +5,10 @@
     <Info />
     <Injecaoinformacao />
     <Info />
-    <Form />
-    <hr>
     <p><strong>Aqui exemplo de formulario em componente isolado (USAMOS MUITO)</strong></p>
+    <Form />
+    
+    
 
     
 </div>
