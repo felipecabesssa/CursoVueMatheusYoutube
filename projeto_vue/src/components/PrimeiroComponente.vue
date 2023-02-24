@@ -1,7 +1,9 @@
 <template>
-    <h1>Olá Vue!</h1>
-    <h3>Meu nome é: {{ nome }} {{ sobrenome }}</h3>
-    <p><strong>Profissão:</strong> {{ profissao }}</p>
+    <div>
+        <h2>Olá Vue!</h2>
+        <h3>Meu nome é: {{ nome }} {{ sobrenome }}</h3>
+        <p><strong>Profissão:</strong> {{ profissao }}</p>
+    </div>
 </template>
 
 <script>
