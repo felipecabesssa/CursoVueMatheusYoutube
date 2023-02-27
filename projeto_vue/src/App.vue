@@ -31,16 +31,20 @@
     <hr>
     <p><strong>Não precisa escrever v-bind:href= toda vez, basta os : ex :href= </strong></p>
     <Info />
+    <Picture />
+
+    <hr>
+    <h3 style="color: red; text-align: center;">Aula 11 - Métodos</h3>
+    <hr>
+    <p>Email sera exibido somente após clicar via método (Component Info.vue)</p>
+    <p>Método altera o booleano (mostrar_email) pra true or false ao clicar</p>
+    <p>Condicional dentro do método showEmail muda o texto do botão</p>
+    
     <br>
     <br>
     <br>
     <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    
   </div>
 </template>
 
@@ -49,6 +53,7 @@ import PrimeiroComponente from './components/PrimeiroComponente.vue'
 import LyfeCycle from './components/LifeCycle.vue'
 import Pessoa from './components/Pessoa.vue'
 import Info from './components/Info.vue'
+import Picture from './components/Picture.vue'
 
 export default {
   name: 'App',
@@ -56,7 +61,8 @@ export default {
     PrimeiroComponente,
     LyfeCycle,
     Pessoa,
-    Info
+    Info,
+    Picture
   }
 }
 </script>
