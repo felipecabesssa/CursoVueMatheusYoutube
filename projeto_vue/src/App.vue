@@ -25,6 +25,22 @@
     <p>V-Show é parecida com o v-if porem ela só exibe ou não</p>
     <p>Exemplos no componente Info.vue acima</p>
     <p>V-for exibe uma lista (um array) na aplicação</p>
+
+    <hr>
+    <h3 style="color: red; text-align: center;">Aula 10 - Argumentos - V-BIND</h3>
+    <hr>
+    <p><strong>Não precisa escrever v-bind:href= toda vez, basta os : ex :href= </strong></p>
+    <Info />
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
   </div>
 </template>
 
@@ -32,13 +48,15 @@
 import PrimeiroComponente from './components/PrimeiroComponente.vue'
 import LyfeCycle from './components/LifeCycle.vue'
 import Pessoa from './components/Pessoa.vue'
+import Info from './components/Info.vue'
 
 export default {
   name: 'App',
   components: {
     PrimeiroComponente,
     LyfeCycle,
-    Pessoa
+    Pessoa,
+    Info
   }
 }
 </script>
