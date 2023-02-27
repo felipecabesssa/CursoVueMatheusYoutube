@@ -4,6 +4,7 @@
     <h3 style="color: red; text-align: center;">Aula 1 a 6 - Components</h3>
     <hr>
     <PrimeiroComponente />
+    <p>O dado de app é: {{ testando }}</p>
 
     <hr>
     <h3 style="color: red; text-align: center;">Aula 7 - LifeCycle Hooks - Gancho de Ciclo de vida</h3>
@@ -40,6 +41,14 @@
     <p>Método altera o booleano (mostrar_email) pra true or false ao clicar</p>
     <p>Condicional dentro do método showEmail muda o texto do botão</p>
     
+    <hr>
+    <h3 style="color: red; text-align: center;">Aula 12 - CSS - Global e Scoped</h3>
+    <hr>
+    <p>Background ta no global e</p>
+    
+    <p class="teste">Header (cabeçalho) abaixo - component Header ta scoped</p>
+    
+    <Header />
     <br>
     <br>
     <br>
@@ -54,6 +63,7 @@ import LyfeCycle from './components/LifeCycle.vue'
 import Pessoa from './components/Pessoa.vue'
 import Info from './components/Info.vue'
 import Picture from './components/Picture.vue'
+import Header from './components/Header.vue'
 
 export default {
   name: 'App',
@@ -62,7 +72,23 @@ export default {
     LyfeCycle,
     Pessoa,
     Info,
-    Picture
+    Picture,
+    Header
   }
 }
 </script>
+
+<style>
+  body {
+    background-color: #333;
+    color: #fff;
+  }
+
+  a {
+    color: red;
+  }
+
+  .teste {
+    background-color: #000;
+  }
+</style>
