@@ -49,6 +49,12 @@
     <p class="teste">Header (cabeçalho) abaixo - component Header ta scoped</p>
     
     <Header />
+
+    <hr>
+    <h3 style="color: red; text-align: center;">Aula 13 - Listas - Renderização - V-for</h3>
+    <hr>
+
+    <InfoComVfor />
     <br>
     <br>
     <br>
@@ -64,6 +70,7 @@ import Pessoa from './components/Pessoa.vue'
 import Info from './components/Info.vue'
 import Picture from './components/Picture.vue'
 import Header from './components/Header.vue'
+import InfoComVfor from './components/InfoComVfor.vue'
 
 export default {
   name: 'App',
@@ -73,7 +80,8 @@ export default {
     Pessoa,
     Info,
     Picture,
-    Header
+    Header,
+    InfoComVfor
   }
 }
 </script>

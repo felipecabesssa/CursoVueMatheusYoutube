@@ -12,14 +12,14 @@ export default {
     },
     created(){
         setTimeout(() => {
-            this.nome = 'Felipe'
+            this.nome = 'Matheus'
         }, 2000);
 
         this.lifeCycle();
     },
     mounted(){
         setTimeout(() => {
-            this.nome = 'Matheus'
+            this.nome = 'Felipe'
         }, 4000);
 
         this.lifeCycle();
