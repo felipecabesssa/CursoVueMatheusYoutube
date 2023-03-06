@@ -80,6 +80,9 @@
     <hr>
     <h3 style="color: #d2232a; text-align: center;">Aula 15 - Eventos Multiplos - V-Model</h3>
     <hr>
+    <p>São separados por , (virgula) ex.: @click="primeiro($event), segundo($event)</p>
+
+    <MultiplosEventos />
     <br>
     <br>
     <br>
@@ -97,6 +100,7 @@ import Picture from './components/Picture.vue'
 import Header from './components/Header.vue'
 import InfoComVfor from './components/InfoComVfor.vue'
 import Form from './components/form/Form.vue'
+import MultiplosEventos from './components/MultiplosEventos.vue'
 
 export default {
   name: 'App',
@@ -108,7 +112,8 @@ export default {
     Picture,
     Header,
     InfoComVfor,
-    Form
+    Form,
+    MultiplosEventos
   }
 }
 </script>
