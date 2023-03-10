@@ -82,7 +82,25 @@
     <hr>
     <p>São separados por , (virgula) ex.: @click="primeiro($event), segundo($event)</p>
 
+
     <MultiplosEventos />
+    <hr>
+    <h3 style="color: #d2232a; text-align: center;">Aula 16 - Reutilização de componentes</h3>
+    <hr>
+    <h3>Reutilização </h3>
+    <p>
+      O componente é a classe, e ao instanciar um novo objeto dessa classe,
+      cada objeto é unico e tem seu comportamento de acordo com a classe (parametros e métodos),
+      cada botão desses é um objeto independente.   
+    </p>
+
+    <Reutilizacao />
+    <Reutilizacao />
+    <Reutilizacao />
+    <Reutilizacao />
+    <Reutilizacao />
+    <Reutilizacao />
+    <Reutilizacao />
     <br>
     <br>
     <br>
@@ -101,6 +119,7 @@ import Header from './components/Header.vue'
 import InfoComVfor from './components/InfoComVfor.vue'
 import Form from './components/form/Form.vue'
 import MultiplosEventos from './components/MultiplosEventos.vue'
+import Reutilizacao from './components/Reutilizacao.vue'
 
 export default {
   name: 'App',
@@ -113,7 +132,8 @@ export default {
     Header,
     InfoComVfor,
     Form,
-    MultiplosEventos
+    MultiplosEventos,
+    Reutilizacao
   }
 }
 </script>
