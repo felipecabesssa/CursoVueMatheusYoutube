@@ -110,6 +110,14 @@
 
     <p>Exemplo com V-If na aula 12 - Header.vue - Props com Array</p>
 
+    <hr>
+    <h3 style="color: #d2232a; text-align: center;">Aula 18 - Emit - Ouvindo Eventos</h3>
+    <hr>
+
+    <p>Aula em cima da imagem da aula 10 - ao clicar na imagem ela muda</p>
+
+    <p>Copia do componente abaixo</p>
+    <Picture />
     <br>
     <br>
     <br>
@@ -129,6 +137,7 @@ import InfoComVfor from './components/InfoComVfor.vue'
 import Form from './components/form/Form.vue'
 import MultiplosEventos from './components/MultiplosEventos.vue'
 import Reutilizacao from './components/Reutilizacao.vue'
+import MudarImagem from './components/MudarImagem.vue'
 
 export default {
   name: 'App',
@@ -142,7 +151,8 @@ export default {
     InfoComVfor,
     Form,
     MultiplosEventos,
-    Reutilizacao
+    Reutilizacao,
+    MudarImagem
   }
 }
 </script>
