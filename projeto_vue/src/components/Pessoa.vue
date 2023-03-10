@@ -1,6 +1,7 @@
 <template>
 <div>
-    <h2>Esta é a descrição da pessoa: </h2>
+    <h2>Esta é a descrição da pessoa: {{ nome }}</h2>
+    <Info :email="email" :esta_trabalhando=true />
     <p><strong>Essas infos/lista aqui em baixo estão isoladas no componente Info.vue</strong></p>
     <Info />
     <Injecaoinformacao />
@@ -23,7 +24,8 @@ export default {
     name: 'Pessoa',
     data() {
         return {
-            nome: 'Felipe'
+            nome: 'Felipe',
+            email: 'felipe@mail'
         }
     }
 }

@@ -48,7 +48,7 @@
     
     <p class="teste">Header (cabeçalho) abaixo - component Header ta scoped</p>
     
-    <Header />
+    <Header :esta_logado="true" />
 
     <hr>
     <h3 style="color: #d2232a; text-align: center;">Aula 13 - Listas - Renderização - V-for</h3>
@@ -101,6 +101,15 @@
     <Reutilizacao />
     <Reutilizacao />
     <Reutilizacao />
+
+    <hr>
+    <h3 style="color: #d2232a; text-align: center;">Aula 17 - Utilizando Props</h3>
+    <hr>
+
+    <p>Exemplo na aula 8 - Pessoa.vue e Info.vue</p>
+
+    <p>Exemplo com V-If na aula 12 - Header.vue - Props com Array</p>
+
     <br>
     <br>
     <br>
