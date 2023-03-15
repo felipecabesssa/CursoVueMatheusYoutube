@@ -16,7 +16,11 @@
       {
         "id": 4,
         "tipo": "Integral"
-      }
+      },
+      {
+        "id": 5,
+        "tipo": "Pão mexicano"
+      }  
     ],
     "carnes": [
       {
