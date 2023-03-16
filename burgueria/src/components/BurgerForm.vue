@@ -1,15 +1,15 @@
 <template>
   <div>
-    <p>Componente de mensagem</p>
+    <Message :msg="msg" v-show="msg" />
     <br>
     <div>
-      <form id="burger-form">
-        <div id="input-container">
+      <form id="burger-form" @submit="createBurger">
+        <div class="input-container">
           <label for="nome">Nome do cliente: </label>
           <input type="text" id="nome" v-model="nome" placeholder="Digite o seu nome">
         </div>
 
-        <div id="input-container">
+        <div class="input-container">
           <label for="pao">Escolha o pão: </label>
           <select name="pao" id="pao" v-model="pao">
             <option value="">Selecione seu pão</option>
@@ -17,7 +17,7 @@
           </select>
         </div>
 
-        <div id="input-container">
+        <div class="input-container">
           <label for="carne">Selecione a carne: </label>
           <select name="carne" id="carne" v-model="carne">
             <option value="">Selecione o tipo de carne</option>
@@ -25,31 +25,35 @@
           </select>
         </div>
 
-        <div id="input-container opcionais-container">
-          <label id="opcionais-title" for="opcionais">Selecione os opcionais: </label>
-          <div id="checkbox-container" v-for="opcional in opcionaisdata" :key="opcional.id">
+        <div id="opcionais-container" class="input-container">
+          <label id="opcionais-title" for="opcionais">Selecione os opcionais:</label>
+          <div class="checkbox-container" v-for="opcional in opcionaisdata" :key="opcional.id">
             <input type="checkbox" name="opcionais" v-model="opcionais" :value="opcional.tipo">
             <span>{{ opcional.tipo }}</span>
           </div>
         </div>
 
-        <div id="input-container">
+        <div class="input-container">
           <input type="submit" class="submit-btn" value="Criar meu Burger">
         </div>
       </form>
     </div>
-
   </div>
 </template>
 
 <script>
+import Message from './Message.vue';
 export default {
+  components: { Message },
   name: "BurgerForm",
   data() {
     return {
       paes: null,
       carnes: null,
       opcionaisdata: null,
+      // os dados acima no plural sao dados que vem do seridor
+
+      // os abaixo no singular são dados que serão enviados ao servidor
       nome: null,
       pao: null,
       carne: null,
@@ -59,19 +63,66 @@ export default {
     }
   },
   methods: {
-    async getIngredients() {
+    async getIngredientes() {
 
       const req = await fetch("http://localhost:3000/ingredientes");
       const data = await req.json();
 
       this.paes = data.paes;
       this.carnes = data.carnes;
-      this.opcionais = data.opcionais;
+      this.opcionaisdata = data.opcionais;
 
+    },
+    async createBurger(e) {
+      e.preventDefault();
+
+      // Aqui captura os dados que foram preenchidos no form
+      // Criamos um json com os dados para mandar pro backend
+      const data = {
+        nome: this.nome,
+        carne: this.carne,
+        pao: this.pao,
+        opcionais: Array.from(this.opcionais),
+        status: "Solicitado"
+      }
+
+      // Transforma o Json em Texto
+      const dataJson = JSON.stringify(data)
+      // console.log(data);
+
+      // Aqui manda pro banco de dados, POST (o fetch api é uma biblioteca nativa do JS, JS-puro)
+      // Poderiamos usar uma biblioteca de terceiros como o axios
+      const req = await fetch("http://localhost:3000/burgers", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: dataJson
+      });
+      // A virgula depois do endpoint indica qual o tipo da requisição, senão ele entende que é um GET por padrão
+      // O headers indica que to me comunicando via JSON
+      // O body indica quais dados serão enviados
+
+      const res = await req.json();
+      console.log(res);
+      // Aqui recuperamos a resposta (caso queiramos)
+
+      // Colocar mensagem de sistema
+      this.msg = `Pedido Nº ${ res.id } realizado com sucesso`
+
+      // Limpar msg
+      setTimeout(() => this.msg = "", 3000);
+
+      // Limpar os capos após pedido
+      this.nome = "";
+      this.carne = "";
+      this.pao = "";
+      this.opcionais = "";
     }
   },
   mounted() {
-    this.getIngredients()
+    this.getIngredientes()
+  },
+  components: {
+    Message
   }
 
 }
@@ -83,7 +134,7 @@ export default {
     margin: 0 auto;
   }
 
-  #input-container {
+  .input-container {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
@@ -107,21 +158,25 @@ export default {
     flex-wrap: wrap;
   }
 
-  #checkbox-container {
+  .checkbox-container {
     display: flex;
     align-items: flex-start;
     width: 50%;
     margin-bottom: 20px;
   }
 
-  #checkbox-container span, 
-  #checkbox-container input {
+  .checkbox-container span, 
+  .checkbox-container input {
     width: auto;
   }  
 
-  #checkbox-container span {
+  .checkbox-container span {
     margin-left: 6px;
     font-weight: bold;
+  }
+
+  .paddingEsquerda {
+    padding-left: 30px;
   }
 
   .submit-btn {
