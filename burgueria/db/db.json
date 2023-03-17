@@ -100,7 +100,7 @@
         "Rucula",
         "Pepino"
       ],
-      "status": "Solicitado",
+      "status": "Finalizado",
       "id": 1
     },
     {
@@ -136,6 +136,28 @@
       ],
       "status": "Solicitado",
       "id": 4
+    },
+    {
+      "nome": "Pedido dia 17-03-2023",
+      "carne": "Picanha",
+      "pao": "Pão mexicano",
+      "opcionais": [
+        "Pepino",
+        "Tomate",
+        "Rucula"
+      ],
+      "status": "Solicitado",
+      "id": 5
+    },
+    {
+      "nome": "Flamengo",
+      "carne": "Maminha",
+      "pao": "3 Queijos",
+      "opcionais": [
+        "Salame"
+      ],
+      "status": "Solicitado",
+      "id": 6
     }
   ]
 }

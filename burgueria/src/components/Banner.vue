@@ -1,6 +1,6 @@
 <template>
   <div id="main-banner">
-    <h2>Make Your Burger</h2>
+    <h2>Burgueria do cabesssa</h2>
   </div>
 </template>
 
@@ -25,7 +25,7 @@ export default {
 
   #main-banner h2 {
     color: #b4b4b4;
-    padding-left: 15px;
+    padding-left: 14px;
   }
 
   @media(min-width:770px) {
