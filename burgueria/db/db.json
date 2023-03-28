@@ -109,30 +109,8 @@
         "Bacon",
         "Pepino"
       ],
-      "status": "Finalizado",
-      "id": 3
-    },
-    {
-      "nome": "Pedido dia 17-03-2023",
-      "carne": "Picanha",
-      "pao": "Pão mexicano",
-      "opcionais": [
-        "Pepino",
-        "Tomate",
-        "Rucula"
-      ],
       "status": "Solicitado",
-      "id": 5
-    },
-    {
-      "nome": "Flamengo",
-      "carne": "Maminha",
-      "pao": "3 Queijos",
-      "opcionais": [
-        "Salame"
-      ],
-      "status": "Finalizado",
-      "id": 6
+      "id": 3
     }
   ]
 }
