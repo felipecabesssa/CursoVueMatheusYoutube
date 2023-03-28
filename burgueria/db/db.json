@@ -91,19 +91,6 @@
   ],
   "burgers": [
     {
-      "nome": "Felipe",
-      "carne": "Picanha",
-      "pao": "Italiano Branco",
-      "opcionais": [
-        "Bacon",
-        "Cheddar",
-        "Rucula",
-        "Pepino"
-      ],
-      "status": "Finalizado",
-      "id": 1
-    },
-    {
       "nome": "Henrique",
       "carne": "Maminha",
       "pao": "Parmesão e Orégano",
@@ -158,6 +145,23 @@
       ],
       "status": "Solicitado",
       "id": 6
+    },
+    {
+      "nome": "felipe 24-03-2023",
+      "carne": "Picanha",
+      "pao": "3 Queijos",
+      "opcionais": [
+        "Bacon",
+        "Rucula",
+        "Cebola roxa",
+        "Cheddar",
+        "Tomate",
+        "Pepino",
+        "Salame",
+        "Abacaxi"
+      ],
+      "status": "Solicitado",
+      "id": 7
     }
   ]
 }
